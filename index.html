@@ -1,0 +1,155 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .page { max-width: 780px; padding: 2rem 1.5rem; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .tag-purple { background: #EEEDFE; color: #3C3489; }
+  .tag-amber { background: #FAEEDA; color: #633806; }
+  .tag-coral { background: #FAECE7; color: #712B13; }
+  .tag-blue { background: #E6F1FB; color: #0C447C; }
+  .tag-teal { background: #E1F5EE; color: #085041; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 12px; }
+  .gap-label { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .gap-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .ponder { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; margin-top: 8px; padding-top: 8px; border-top: 0.5px solid var(--color-border-tertiary); font-style: italic; }
+  .apnr-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .apnr-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; }
+  .apnr-letter { font-size: 22px; font-weight: 500; margin-bottom: 4px; }
+  .apnr-word { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 8px; }
+  .apnr-finding { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .apnr-finding strong { color: var(--color-text-primary); font-weight: 500; }
+  .sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sol-card { border-left: 3px solid; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 0.75rem 1rem; background: var(--color-background-secondary); }
+  .sol-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .sol-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .closer { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; border-left: 3px solid #7F77DD; }
+  .time-badge { display: inline-flex; align-items: center; gap: 6px; background: #EEEDFE; color: #3C3489; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; }
+  .preview-card { background: var(--color-background-primary); border: 1.5px solid #AFA9EC; border-radius: var(--border-radius-lg); padding: 1.5rem; }
+  .preview-audience { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #534AB7; margin-bottom: 0.5rem; }
+  .preview-headline { font-size: 28px; font-weight: 500; color: var(--color-text-primary); line-height: 1.2; margin-bottom: 1rem; }
+  .preview-body { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+  .preview-note { font-size: 12px; color: var(--color-text-secondary); font-style: italic; padding-top: 0.75rem; border-top: 0.5px solid var(--color-border-tertiary); }
+</style>
+
+<div class="page">
+
+  <div style="margin-bottom: 1.5rem;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; flex-wrap: wrap;">
+      <span class="tag tag-purple">Brand audit</span>
+      <span class="time-badge">&#9201; Under 1 hour</span>
+      <span style="font-size: 12px; color: var(--color-text-secondary);">Cognition AI · First impressions exercise</span>
+    </div>
+    <h1 style="font-size: 22px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; margin-bottom: 0.4rem;">What I found looking at Cognition as a first-time visitor</h1>
+    <p style="font-size: 14px; color: var(--color-text-secondary); line-height: 1.6;">I am a marketer, not a developer. I came to your site with fresh eyes and one question: <em>who is this for, and why should I care?</em> Human attention spans are shorter than ever. First impressions are won or lost in seconds. Here is what I found in under an hour, and what I would do about it.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div style="margin-bottom: 1.5rem;">
+    <div class="section-label">Gaps spotted on first glance</div>
+    <div class="card-grid">
+      <div class="card">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          <span class="tag tag-coral">Gap 1</span>
+        </div>
+        <div class="gap-label">Two audiences, one homepage</div>
+        <div class="gap-body">The nav has an "Enterprise" tab. The hero says "AI software engineer." These signal two very different buyers but the page does not choose between them. A developer and a VP of Engineering read the same words differently. Right now, neither feels spoken to directly.</div>
+      </div>
+      <div class="card">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          <span class="tag tag-amber">Gap 2</span>
+        </div>
+        <div class="gap-label">Industry focus is unclear</div>
+        <div class="gap-body">The logo wall skews finance-heavy. But the product pitch is horizontal, meaning any engineering team could use this. Are you a fintech tool or a universal one? Visitors should not have to guess. Implicit signals are doing work that explicit messaging should do.</div>
+      </div>
+      <div class="card">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          <span class="tag tag-blue">Thought to ponder</span>
+        </div>
+        <div class="gap-label">Visual design leads, text gets missed</div>
+        <div class="gap-body">The site is visually strong but the product copy gets lost in it. In 5 seconds, most visitors walk away thinking "big companies use this, looks impressive" rather than "this solves my problem." The logo wall is doing more persuasion work than the value proposition.</div>
+        <div class="ponder">&#128161; Is this intentional? If Cognition's current growth is word of mouth among people who already recognize those logos, the social proof strategy makes sense. But as they scale beyond warm audiences, copy may need to carry more weight.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div style="margin-bottom: 1.5rem;">
+    <div class="section-label">APNR framework applied to Cognition's own positioning</div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 0.75rem; line-height: 1.5;">APNR is a sales qualification framework: Attributes, Person, Needs, Readiness. I am turning it inward. Does Cognition's current brand pass its own ICP test?</p>
+    <div class="apnr-grid">
+      <div class="apnr-card">
+        <div class="apnr-letter" style="color: #534AB7;">A</div>
+        <div class="apnr-word">Attributes</div>
+        <div class="apnr-finding"><strong>Does the brand signal the right fit?</strong> Partially. "AI software engineer" is clear. But the enterprise tab, finance logos, and developer-first copy create a mixed profile. A visitor cannot quickly self-qualify.</div>
+      </div>
+      <div class="apnr-card">
+        <div class="apnr-letter" style="color: #0F6E56;">P</div>
+        <div class="apnr-word">Person</div>
+        <div class="apnr-finding"><strong>Who is the decision-maker, and can they find their message?</strong> Three stakeholders: developer, business unit head, CEO. Stakeholder-specific messaging exists but only on the Enterprise page. The homepage puts the burden of self-sorting on the visitor. Navigation is harder than it needs to be.</div>
+      </div>
+      <div class="apnr-card">
+        <div class="apnr-letter" style="color: #993C1D;">N</div>
+        <div class="apnr-word">Needs</div>
+        <div class="apnr-finding"><strong>Does the site surface the right pain?</strong> Somewhat. "Focus on more interesting problems" is compelling but buried. The benchmark data (13.86% vs 1.96%) is strong proof but leads with jargon. Lead with the pain, follow with the proof.</div>
+      </div>
+      <div class="apnr-card">
+        <div class="apnr-letter" style="color: #185FA5;">R</div>
+        <div class="apnr-word">Readiness</div>
+        <div class="apnr-finding"><strong>Does the site convert intent to action?</strong> Weak. A visitor who is ready to try has to hunt for the CTA. No urgency signal, no clear next step differentiated by audience type. Enterprise and self-serve paths are not distinct enough.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div style="margin-bottom: 1.5rem;">
+    <div class="section-label">What I would do, inspired by the framework</div>
+    <div class="sol-grid">
+      <div class="sol-card" style="border-color: #534AB7;">
+        <div class="sol-title">Split the homepage narrative</div>
+        <div class="sol-body">Give developers and enterprise buyers distinct entry points, either through audience-aware hero copy or a clear fork above the fold. Each audience should feel like the page was written for them.</div>
+      </div>
+      <div class="sol-card" style="border-color: #0F6E56;">
+        <div class="sol-title">Surface stakeholder paths earlier</div>
+        <div class="sol-body">The Enterprise page has the right language for procurement buyers. That messaging should not require navigation to find. Bring it up the funnel so each stakeholder self-identifies faster.</div>
+      </div>
+      <div class="sol-card" style="border-color: #993C1D;">
+        <div class="sol-title">Lead with pain, follow with proof</div>
+        <div class="sol-body">The benchmark numbers are strong but come too late. Open with the problem: engineering teams are bottlenecked on repetitive work. Then land the proof. Let copy do the work the visuals cannot.</div>
+      </div>
+      <div class="sol-card" style="border-color: #185FA5;">
+        <div class="sol-title">Build dual CTAs with distinct intent</div>
+        <div class="sol-body">"Try Devin" and "Talk to sales" can coexist but they need to be visually and contextually distinct. Separate the paths and measure each independently.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div style="margin-bottom: 1.5rem;">
+    <div class="section-label">Preview · what messaging could look like for a business unit head</div>
+    <div class="preview-card">
+      <div class="preview-audience">Target: business unit head</div>
+      <div class="preview-headline">Ship faster. Scale smarter.</div>
+      <div class="preview-body">Your engineering team is talented. But talent spent on housekeeping is talent wasted. Devin handles the repetitive work, keeps things organized, and moves fast, so your team can focus on what actually ships product. Same headcount. More output. No backlog buildup.</div>
+      <div class="preview-note">This is a preview of how stakeholder-specific messaging could look in practice. The current site speaks to developers. Business unit heads need a different entry point, one grounded in operational and financial outcomes, not technical capability.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="closer">
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+      <span class="time-badge">&#9201; Done in under 1 hour</span>
+    </div>
+    <p style="font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">First impressions matter. So does depth. And so does speed.</p>
+    <p style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.6;">I came in as a confused first-time visitor with no prior knowledge of the product or the developer space. In under an hour I spotted gaps, structured them through a real framework, and turned them into concrete recommendations. I did not have a full brief, a team, or a week. I had a fresh perspective and a bias toward action. That is what I bring. Imagine what I could do with more time, more context, and a seat at the table.</p>
+    <div style="margin-top: 0.75rem; font-size: 12px; color: var(--color-text-secondary);">Taruna Aiyyar · taruna.r.aiyyar@gmail.com · linkedin.com/in/taruna-aiyyar</div>
+  </div>
+
+</div>
